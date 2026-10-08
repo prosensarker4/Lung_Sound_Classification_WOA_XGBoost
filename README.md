@@ -45,7 +45,5 @@ Results were produced with the following versions (Google Colab, Linux x86-64, C
 | numpy | 2.1.3 |
 | scipy | 1.16.3 |
 
-## WOA optimization
-
 
 Dataset: Torabi, Y., Shirani, S., & Reilly, J. (2025). *HLS-CMDS: Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope*. UCI Machine Learning Repository. <https://doi.org/10.1109/IEEEDATA.2025.3566012> (CC BY 4.0).
