@@ -1,10 +1,7 @@
 # WOA-XGBoost for Lung Sound Classification — Reproducibility Code
 
-[![smoke-test](https://github.com/<USER>/<REPO>/actions/workflows/ci.yml/badge.svg)](https://github.com/<USER>/<REPO>/actions)
-[![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
-[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](data/README.md)
-
-Code to reproduce the results of the paper **"<PAPER TITLE>"** (<JOURNAL / CONFERENCE, YEAR>, DOI: <DOI>).
+Code to reproduce the results of the paper **"<An Optimization-Driven and Interpretable Ensemble Learning Framework for
+Stethoscope-Based Lung Sound Classification>"**.
 
 The study classifies six lung-sound types (coarse crackles, fine crackles, normal, pleural rub, rhonchi, wheezing) from acoustic features of 3-second audio segments, using an **XGBoost** classifier whose hyperparameters and feature subset were tuned with the **Whale Optimization Algorithm (WOA)**.
 
@@ -29,7 +26,7 @@ The finalized WOA-XGBoost model (hyperparameters and feature subset chosen by th
 | **Test** | **70.38** | **70.07** | **70.69** | **70.38** |
 
 ## Evaluation protocol
-
+0. Download and load the preprocessed dataset (Lung_Sound_975_Audio_3s_Segment_Features.csv) and the ipynb file (Reproducibility_Code_WOA_XGBoost.ipynb).
 1. Drop `Location`, `Lung Sound ID`, `Gender`; target is `Lung Sound Type`.
 2. Shuffle all 975 rows once (`random_state=42`).
 3. Ten splits: each test set is a window of 30 % of the rows (292 rows), shifted by 10 % (97 rows) per fold, wrapping around the end of the data; the remaining rows form the training set. Consecutive test windows therefore overlap.
@@ -51,10 +48,4 @@ Results were produced with the following versions (Google Colab, Linux x86-64, C
 ## WOA optimization
 
 
-Dataset: Torabi, Y., Shirani, S., & Reilly, J. (2025). *HLS-CMDS: Heart and Lung Sounds Dataset
-Recorded from a Clinical Manikin using Digital Stethoscope*. UCI Machine Learning Repository.
-<https://doi.org/10.1109/IEEEDATA.2025.3566012> (CC BY 4.0).
-
-## License
-
-Code: [MIT](LICENSE). Data: CC BY 4.0 (see [`data/README.md`](data/README.md)).
+Dataset: Torabi, Y., Shirani, S., & Reilly, J. (2025). *HLS-CMDS: Heart and Lung Sounds Dataset Recorded from a Clinical Manikin using Digital Stethoscope*. UCI Machine Learning Repository. <https://doi.org/10.1109/IEEEDATA.2025.3566012> (CC BY 4.0).
